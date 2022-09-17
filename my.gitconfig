@@ -1,0 +1,10 @@
+[user]
+	name = Marc Orr
+	email = marc.orr@gmail.com
+[core]
+	abbrev = 12
+	editor = vim
+[pretty]
+	fixes = Fixes: %h (\"%s\")
+[am]
+	threeWay = true
