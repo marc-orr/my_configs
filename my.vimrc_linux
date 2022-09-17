@@ -1,4 +1,4 @@
-" Linux-specific vim settings
+" Linux-specific vim settings (hard tabs, 8 spaces).
 set ts=8
 set shiftwidth=8
 set noexpandtab

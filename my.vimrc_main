@@ -13,12 +13,6 @@ set colorcolumn=81
 " show line numbers
 set number
 
-" Soft tabs, 4 spaces.
-set softtabstop=4
-set shiftwidth=4
-set tabstop=4
-set expandtab
-
 " Case insensitive searching.
 set ignorecase
 set smartcase

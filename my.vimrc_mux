@@ -4,4 +4,6 @@ source ~/.vimrc_main
 
 if findfile('.vimrc_linux') == ".vimrc_linux"
   source ~/.vimrc_linux
+else
+  source ~/.vimrc_four_spaces
 endif
