@@ -1,0 +1,9 @@
+" This file is used to source Linux-specific vim settings
+
+source ~/.vimrc_external
+
+if findfile('.vimrc_linux') == ".vimrc_linux"
+  source ~/.vimrc_linux
+else
+  source ~/.vimrc_google3
+endif

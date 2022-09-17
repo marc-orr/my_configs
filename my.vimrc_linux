@@ -1,0 +1,4 @@
+" Linux-specific vim settings
+set ts=8
+set shiftwidth=8
+set noexpandtab

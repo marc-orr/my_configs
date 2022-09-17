@@ -1,0 +1,90 @@
+set nocompatible
+
+" Cursor position
+set ruler
+
+" I think I put this here so backspace works intuitively
+" (like in windows editors), but I don't remember now.
+set backspace=indent,eol,start
+
+" Column at 80 chars.
+set colorcolumn=81
+
+" show line numbers
+set number
+
+" Soft tabs, 4 spaces.
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
+set expandtab
+
+" Case insensitive searching.
+set ignorecase
+set smartcase
+
+" Shell-like tab completion.
+set wildmode=longest,list
+
+" syntax highlighting
+syntax on
+filetype on
+"au BufNewFile,BufRead *.cu set filetype=cpp
+"au BufNewFile,BufRead *.isa set filetype=cpp
+"au BufNewFile,BufRead *.cl set filetype=cpp
+"au BufNewFile,BufRead *.sm set filetype=cpp
+"au BufNewFile,BufRead *.cilk set filetype=cpp
+"au BufNewFile,BufRead *.cc set filetype=cpp
+"au BufNewFile,BufRead *.hh set filetype=cpp
+"au BufNewFile,BufRead *.hla set filetype=cpp
+au BufNewFile,BufRead *.swig set filetype=cpp
+
+" Tab text, to make navigating them easier.
+if exists("+showtabline")
+     function MyTabLine()
+         let s = ''
+         let t = tabpagenr()
+         let i = 1
+         while i <= tabpagenr('$')
+             let buflist = tabpagebuflist(i)
+             let winnr = tabpagewinnr(i)
+             let s .= '%' . i . 'T'
+             let s .= (i == t ? '%1*' : '%2*')
+             let s .= ' '
+             let s .= i . ':'
+             let s .= ' %*'
+             let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+             let file = bufname(buflist[winnr - 1])
+             let file = fnamemodify(file, ':p:t')
+             if file == ''
+                 let file = '[No Name]'
+             endif
+             let s .= (getbufvar(buflist[winnr - 1], "&mod")?'+ ':'').file
+             let i = i + 1
+         endwhile
+         let s .= '%T%#TabLineFill#%='
+         let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+         return s
+     endfunction
+     set stal=2
+     set tabline=%!MyTabLine()
+     map    <F9>  :tabprev<CR>
+     map!   <F9>  <C-O>:tabprev<CR>
+     map    <F10>    :tabnext<CR>
+     map!   <F10>    <C-O>:tabnext<CR>
+endif
+
+" netrw
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+
+" split navigation
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+Glug whitespace !highlight
+
+" Always display statusline with file name, even without splits.
+set laststatus=2
