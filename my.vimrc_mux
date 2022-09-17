@@ -1,9 +1,7 @@
 " This file is used to source Linux-specific vim settings
 
-source ~/.vimrc_external
+source ~/.vimrc_main
 
 if findfile('.vimrc_linux') == ".vimrc_linux"
   source ~/.vimrc_linux
-else
-  source ~/.vimrc_google3
 endif
