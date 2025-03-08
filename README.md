@@ -29,4 +29,7 @@ $ vi ~/.gitconfig
 ```bash
 # For zsh.
 $ echo "source \$HOME/my_configs/my.zshrc" >> ~/.zshrc
+
+# For bash.
+$ echo "source \$HOME/my_configs/my.bashrc" >> ~/.bashrc
 ```
