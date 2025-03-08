@@ -1,1 +1,1 @@
-source ~/my_configs/my.vimrc_mux
+source $HOME/my_configs/my.vimrc_mux
