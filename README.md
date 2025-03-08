@@ -23,3 +23,10 @@ $ cp ~/my_configs/my.gitconfig ~/.gitconfig
 
 $ vi ~/.gitconfig
 ```
+
+5. Source shell configs (depending on which shell).
+
+```bash
+# For zsh.
+$ echo "source \$HOME/my_configs/my.zshrc" >> ~/.zshrc
+```
