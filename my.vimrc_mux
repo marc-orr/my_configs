@@ -1,9 +1,9 @@
 " This file is used to source Linux-specific vim settings
 
-source ~/.vimrc_main
+source ~/my_configs/my.vimrc_main
 
 if findfile('.vimrc_linux') == ".vimrc_linux"
-  source ~/.vimrc_linux
+  source ~/my_configs/my.vimrc_linux
 else
-  source ~/.vimrc_four_spaces
+  source ~/my_configs/my.vimrc_four_spaces
 endif
