@@ -4,16 +4,16 @@ A place to store Marc Orr's various Linux config file (e.g., vim, tmux).
 
 ## Instructions
 1. Place this directory in your home directory, $HOME. 
-2. Copy `my.vimrc` to `~/.vimrc`. Note: This file sources files from `~/my_configs`.
+2. Link (or copy) `my.vimrc` to `~/.vimrc`. Note: This file sources files from `~/my_configs`.
 
 ```bash
-$ cp ~/my_configs/my.vimrc ~/.vimrc
+$ ln -s $HOME/my_configs/my.vimrc $HOME/.vimrc
 ```
 
-3. Copy `my.tmux.conf` to `~/.tmux.conf`.
+3. Link (or copy) `my.tmux.conf` to `~/.tmux.conf`.
 
 ```bash
-$ cp ~/my_configs/my.tmux.conf ~/.tmux.conf
+$ ln -s $HOME/my_configs/my.tmux.conf $HOME/.tmux.conf
 ```
 
 4. Copy `my.gitconfig` to `~/.gitconfig`. Edit the user fields as needed.
