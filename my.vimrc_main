@@ -80,3 +80,8 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 " Always display statusline with file name, even without splits.
 set laststatus=2
+
+" On new line, position cursor at proper indentation.
+set autoindent
+set smartindent
+filetype plugin indent on
